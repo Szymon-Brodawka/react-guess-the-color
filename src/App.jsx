@@ -1,10 +1,11 @@
-import './App.css'
+import './App.css';
+import Container from './components/Container';
 
 function App() {
 
   return (
     <>
-      <h1 className='text-3xl bold'>Hello World</h1>
+        <Container></Container>
     </>
   )
 }
