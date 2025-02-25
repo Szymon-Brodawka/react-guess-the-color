@@ -63,7 +63,7 @@ export default function Container() {
             <h1 className="text-2xl">Guess the Color</h1>
             <ColorsContext.Provider value={ hexColors }>
             <RightColorContext.Provider value={ chosenColor }>
-                <ColorBlock backgroundColor={"444444"}></ColorBlock>
+                <ColorBlock></ColorBlock>
                 <ColorsRow colors={ ["df4929", "3981a0", "6a1574"] }></ColorsRow>
             </RightColorContext.Provider>
             </ColorsContext.Provider>
