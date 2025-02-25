@@ -59,8 +59,9 @@ export default function Container() {
     const [ chosenColor, setChosenColor ] = useState(getRandomRightColor(hexColors));
 
     const updateHexColors = () => {
-        setHexColors(getRandomHexColors());
-        setChosenColor(getRandomRightColor(hexColors));
+        const colors = getRandomHexColors(); 
+        setHexColors(colors);
+        setChosenColor(getRandomRightColor(colors));
     }
 
     return(
