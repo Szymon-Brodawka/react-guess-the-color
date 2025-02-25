@@ -1,6 +1,7 @@
 import ColorBlock from "./ColorBlock";
 import ColorsRow from "./ColorsRow";
 import { ColorsContext } from "../Contexts/ColorsContext";
+import { RightColorContext } from "../Contexts/RightColorContext";
 import { useState } from "react";
 
 function getRandomHexColor() {
@@ -60,9 +61,11 @@ export default function Container() {
     return(
         <div className="max-w-7xl flex flex-col items-center justify-center gap-y-15">
             <h1 className="text-2xl">Guess the Color</h1>
-            <ColorsContext.Provider value={getRandomHexColors()}>
+            <ColorsContext.Provider value={ hexColors }>
+            <RightColorContext.Provider value={ chosenColor }>
                 <ColorBlock backgroundColor={"444444"}></ColorBlock>
                 <ColorsRow colors={ ["df4929", "3981a0", "6a1574"] }></ColorsRow>
+            </RightColorContext.Provider>
             </ColorsContext.Provider>
         </div>
     )
