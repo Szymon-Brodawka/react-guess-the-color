@@ -64,7 +64,7 @@ export default function Container() {
             <ColorsContext.Provider value={ hexColors }>
             <RightColorContext.Provider value={ chosenColor }>
                 <ColorBlock></ColorBlock>
-                <ColorsRow colors={ ["df4929", "3981a0", "6a1574"] }></ColorsRow>
+                <ColorsRow></ColorsRow>
             </RightColorContext.Provider>
             </ColorsContext.Provider>
         </div>
