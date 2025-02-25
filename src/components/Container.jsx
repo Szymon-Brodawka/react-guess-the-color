@@ -58,10 +58,15 @@ export default function Container() {
     const [ hexColors, setHexColors ] = useState(getRandomHexColors());
     const [ chosenColor, setChosenColor ] = useState(getRandomRightColor(hexColors));
 
+    const updateHexColors = () => {
+        setHexColors(getRandomHexColors());
+        setChosenColor(getRandomRightColor(hexColors));
+    }
+
     return(
         <div className="max-w-7xl flex flex-col items-center justify-center gap-y-15">
             <h1 className="text-2xl">Guess the Color</h1>
-            <ColorsContext.Provider value={ { hexColors, setHexColors } }>
+            <ColorsContext.Provider value={ { hexColors, updateHexColors } }>
             <RightColorContext.Provider value={ chosenColor }>
                 <ColorBlock></ColorBlock>
                 <ColorsRow></ColorsRow>
