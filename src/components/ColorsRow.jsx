@@ -1,6 +1,6 @@
-import { useContext } from "react"
-import ColorAnswer from "./ColorAnswer"
-import { ColorsContext } from "../Contexts/ColorsContext"
+import { useContext } from "react";
+import ColorAnswer from "./ColorAnswer";
+import { ColorsContext } from "../Contexts.js";
 
 export default function ColorsRow() {
     const { hexColors } = useContext(ColorsContext);

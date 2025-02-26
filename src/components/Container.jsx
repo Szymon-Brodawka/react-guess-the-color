@@ -1,8 +1,7 @@
 import ColorBlock from "./ColorBlock";
 import ColorsRow from "./ColorsRow";
-import { ColorsContext } from "../Contexts/ColorsContext";
-import { RightColorContext } from "../Contexts/RightColorContext";
 import { useState } from "react";
+import { ColorsContext, RightColorContext } from "../Contexts.js";
 
 function getRandomHexColor() {
     const NUMBER_OF_VALUES = 16;

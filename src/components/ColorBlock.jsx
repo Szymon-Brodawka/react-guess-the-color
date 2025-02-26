@@ -1,5 +1,5 @@
-import { useContext } from "react"
-import { RightColorContext } from "../Contexts/RightColorContext"
+import { useContext } from "react";
+import { RightColorContext } from "../Contexts.js";
 
 export default function ColorBlock() {
     const backgroundColor = useContext(RightColorContext);
