@@ -1,6 +1,6 @@
 import { useEffect, useRef, useCallback } from "react";
 
-export default function useTimeout(callback, delay) {
+export default function useTimeout(callback, delay, setTimeoutOnFirstCall = false) {
     const callbackRef = useRef(callback);
     const timeoutRef = useRef();
     
@@ -17,7 +17,8 @@ export default function useTimeout(callback, delay) {
     }, []);
 
     useEffect(() => {
-        set()
+        if(setTimeoutOnFirstCall) set();
+        
         return clear
     }, [delay, set, clear])
     
