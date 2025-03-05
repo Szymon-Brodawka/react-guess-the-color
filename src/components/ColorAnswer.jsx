@@ -1,14 +1,15 @@
 import { useContext } from "react";
-import { RightColorContext } from "../Contexts.js";
+import { ColorsContext, RightColorContext } from "../Contexts.js";
+import useUpdateColors from "../hooks/useUpdateColors.js";
 
 export default function ColorAnswer( { color, index, colorRefs }){
     const rightColor = useContext(RightColorContext);
+    const { updateHexColors } = useContext(ColorsContext);
+    const { update } = useUpdateColors(colorRefs, rightColor, updateHexColors);
 
-    const update = () => {
-        colorRefs.current.forEach((colorRef) => {
-            colorRef.style.backgroundColor = colorRef.textContent === rightColor ? "green" : "red"
-        });
-    }
+    
+
+    
 
     return(
         <button

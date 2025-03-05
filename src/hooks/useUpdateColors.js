@@ -13,7 +13,6 @@ export default function useUpdateColors(colorRefs, rightColor, updateHexColors) 
     const update = useCallback(() => {
         reset();
         updateAnwersColor();
-        // updateHexColors();
     }, [colorRefs, rightColor]);
     
 
