@@ -1,15 +1,8 @@
-import { useContext } from "react";
-import { ColorsContext, RightColorContext } from "../Contexts.js";
 import useUpdateColors from "../hooks/useUpdateColors.js";
 
 export default function ColorAnswer( { color, index, colorRefs }){
-    const rightColor = useContext(RightColorContext);
-    const { updateHexColors } = useContext(ColorsContext);
-    const { update } = useUpdateColors(colorRefs, rightColor, updateHexColors);
-
-    
-
-    
+    //Remove updateHexColors and rightColor
+    const { update } = useUpdateColors(colorRefs);
 
     return(
         <button
