@@ -7,7 +7,7 @@ export default function ColorsRow() {
     const { hexColors } = useContext(ColorsContext);
 
     return(
-        <div className="flex flex-row gap-x-5">
+        <div className="grid gap-x-5 grid-cols-1 gap-y-8 lg:grid-cols-3">
             {
                 hexColors.map((hexColor, i) => 
                     <ColorAnswer color={hexColor} key={hexColor} index={i} colorRefs={colorRefs}></ColorAnswer>)

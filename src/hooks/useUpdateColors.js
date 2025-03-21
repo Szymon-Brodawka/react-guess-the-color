@@ -3,8 +3,6 @@ import useTimeout from "./useTimeout";
 import { ColorsContext, RightColorContext } from "../Contexts";
 
 export default function useUpdateColors(colorRefs) {
-    //Move updateHexColors here
-    //Change DELAY value
     const DELAY = 2000;
     const { updateHexColors } = useContext(ColorsContext);
     const rightColor = useContext(RightColorContext);

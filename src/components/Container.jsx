@@ -64,8 +64,8 @@ export default function Container() {
     }
 
     return(
-        <div className="max-w-7xl flex flex-col items-center justify-center gap-y-15">
-            <h1 className="text-2xl">Guess the Color</h1>
+        <div className="flex flex-col items-center justify-center gap-y-15 min-h-dvh text-2xl sm:text-1xl lg:text-">
+            <h1 className="text-5xl text-center">Guess the Color</h1>
             <ColorsContext.Provider value={ { hexColors, updateHexColors } }>
             <RightColorContext.Provider value={ chosenColor }>
                 <ColorBlock></ColorBlock>
